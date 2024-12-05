@@ -30,8 +30,8 @@ public class MemberService {
     }
 
     //회원단건조회
-    public Member findOne(Member member){
-        return memberRepository.findOne(member.getId());
+    public Member findOne(Long id){
+        return memberRepository.findOne(id);
     }
 
     //중복회원검증
@@ -41,5 +41,11 @@ public class MemberService {
         if(!findResult.isEmpty()){
             throw new IllegalStateException("이미 존재하는 회원입니다.");
         }
+    }
+
+    @Transactional
+    public void update(Long id, String name) {
+        Member findMember = memberRepository.findOne(id);
+        findMember.setName(name);
     }
 }
