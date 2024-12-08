@@ -1,10 +1,10 @@
-package test.restApi.api.service;
+package test.restApi.api.domain.MemberService;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-import test.restApi.api.entity.Member;
-import test.restApi.api.respository.MemberRepository;
+import test.restApi.api.domain.Member;
+import test.restApi.api.domain.repository.MemberRepository;
 
 import java.util.List;
 

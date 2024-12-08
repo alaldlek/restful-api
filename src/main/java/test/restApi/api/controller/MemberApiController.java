@@ -6,8 +6,8 @@ import lombok.Data;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.*;
-import test.restApi.api.entity.Member;
-import test.restApi.api.service.MemberService;
+import test.restApi.api.domain.Member;
+import test.restApi.api.domain.MemberService.MemberService;
 
 import java.util.List;
 

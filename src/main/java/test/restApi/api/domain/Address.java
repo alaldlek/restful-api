@@ -1,4 +1,4 @@
-package test.restApi.api.entity;
+package test.restApi.api.domain;
 
 import jakarta.persistence.Embeddable;
 import lombok.Getter;
@@ -6,7 +6,6 @@ import lombok.Getter;
 @Embeddable
 @Getter
 public class Address {
-
     private String street;
     private String zipcode;
     private String city;

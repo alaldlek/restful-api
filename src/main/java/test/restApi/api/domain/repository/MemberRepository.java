@@ -1,9 +1,9 @@
-package test.restApi.api.respository;
+package test.restApi.api.domain.repository;
 
 import jakarta.persistence.EntityManager;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Repository;
-import test.restApi.api.entity.Member;
+import test.restApi.api.domain.Member;
 
 import java.util.List;
 

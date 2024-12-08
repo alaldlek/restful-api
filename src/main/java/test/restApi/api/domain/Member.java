@@ -1,14 +1,17 @@
-package test.restApi.api.entity;
+package test.restApi.api.domain;
 
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 
+import java.util.ArrayList;
+import java.util.List;
+
 @Entity
 @Getter @Setter
 public class Member {
-    @Id
-    @GeneratedValue
+
+    @Id @GeneratedValue
     @Column(name = "member_id")
     private Long id;
 
@@ -16,4 +19,7 @@ public class Member {
 
     @Embedded
     private Address address;
+
+    @OneToMany(mappedBy = "member")
+    List<Order> order = new ArrayList<>();
 }
